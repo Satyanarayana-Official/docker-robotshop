@@ -57,6 +57,21 @@ root@986d5b8146da:/opt/server# curl http://localhost:8080/health
 6, Mysql
     in this for shipping we need to create one roboShop@1 user
     also we need to run db scripts in mysql default path
-7,
+
+
+7, shipping
+    we need to copy files carefull otherwise it will not build the jar file
+COPY pom.xml .
+COPY src /opt/server/src
+RUN mvn clean package
+
+i have copied like this then only it worked so we need to makesure properly
+
+if we want to build and run all the images at a time then we need to write one inline script like below
+
+```for i in cart, catalogue,mongodb,mysql,shipping,user...etc; do cd $i; docker build -t vvsatyanarayana/$i:v1 . ; docker push vvsatyanarayana/$i:v1 ; cd .. ;done```
+
+8, RABBITMQ
+for this as per documentation we need to create one user and password 
 
 
