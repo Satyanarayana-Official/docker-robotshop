@@ -52,6 +52,5 @@ root@986d5b8146da:/opt/server# curl http://localhost:8080/health
     same like catalogue as it is nodejs so i have configured only env variables
 
 5, cart
-
-
+    same like catalogue as it is nodejs project so i have ocnfigured only env variables
 
