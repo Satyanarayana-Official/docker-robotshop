@@ -48,4 +48,10 @@ root@986d5b8146da:/opt/server# curl http://localhost:8080/health
     ``docker run -d --name redis --network roboshop redis:7``
     we can directly run this as we dont have any code for this
 
+4, user
+    same like catalogue as it is nodejs so i have configured only env variables
+
+5, cart
+
+
 
