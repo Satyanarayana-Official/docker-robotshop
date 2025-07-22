@@ -54,3 +54,9 @@ root@986d5b8146da:/opt/server# curl http://localhost:8080/health
 5, cart
     same like catalogue as it is nodejs project so i have ocnfigured only env variables
 
+6, Mysql
+    in this for shipping we need to create one roboShop@1 user
+    also we need to run db scripts in mysql default path
+7,
+
+
