@@ -69,9 +69,18 @@ i have copied like this then only it worked so we need to makesure properly
 
 if we want to build and run all the images at a time then we need to write one inline script like below
 
-```for i in cart, catalogue,mongodb,mysql,shipping,user...etc; do cd $i; docker build -t vvsatyanarayana/$i:v1 . ; docker push vvsatyanarayana/$i:v1 ; cd .. ;done```
+```for i in mongodb catalogue frontend redis user cart mysql shipping rabbitmq payment; do cd $i && docker build -t vvsatyanarayana/$i:v1 . && docker push vvsatyanarayana/$i:v1 && cd .. || echo "❌ Failed: $i"; done```
+
+i am pulling my images from my docker hub
+for i in mongodb catalogue frontend redis user cart mysql shipping rabbitmq payment; do docker pull vvsatyanarayana/$i:v1 || echo "❌ Failed to pull: $i"; done
 
 8, RABBITMQ
 for this as per documentation we need to create one user and password 
+
+9, Payment
+
+10, frontend
+
+here we need to check nginx.conf file and htmal pages are properly reflecting or not
 
 
